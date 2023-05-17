@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paytm Clone</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Paytm Clone</h1>
+
+    <div id="wallet">
+        <h2>Wallet Balance: <span id="balance">0</span></h2>
+        <button id="addMoneyBtn">Add Money</button>
+    </div>
+
+    <div id="addMoneyModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Add Money To Wallet</h3>
+            <input type="number" id="amountInput" placeholder="Enter Amount">
+            <button id="confirmBtn">Confirm</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
