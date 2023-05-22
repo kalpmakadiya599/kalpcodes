@@ -4,26 +4,109 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paytm Clone</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .form-group select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        .form-group button {
+            width: 100%;
+            padding: 8px;
+            background-color: #4CAF50;
+            border: none;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <h1>Paytm Clone</h1>
-
-    <div id="wallet">
-        <h2>Wallet Balance: <span id="balance">0</span></h2>
-        <button id="addMoneyBtn">Add Money</button>
+    <div class="container">
+        <h2>Registration Form</h2>
+        <form id="registrationForm">
+            <div class="form-group">
+                <lable for="firstName">First Name:</lable>
+                <input type="text" id="firstName" required>
+            </div>
+            <div class="form-group">
+                <lable for="lastName">Last Name:</lable>
+                <input type="text" id="lastName" required>
+            </div>
+            <div class="form-group">
+                <lable for="email">Email:</lable>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <lable for="phone">Phone Number:</lable>
+                <input type="text" id="phone" required>
+            </div>
+            <div class="form-group">
+                <lable for="city">City:</lable>
+                <input type="text" id="city" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Register</button>
+            </div>
+        </form>
     </div>
 
-    <div id="addMoneyModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h3>Add Money To Wallet</h3>
-            <input type="number" id="amountInput" placeholder="Enter Amount">
-            <button id="confirmBtn">Confirm</button>
-        </div>
-    </div>
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            event.preventDefault();
 
-    <script src="script.js"></script>
+            var firstName = document.getElementById('firstName').value;
+            var lastName = document.getElementById('lastName').value;
+            var email = document.getElementById('email').value;
+            var phone = document.getElementById('phone').value;
+            var city = document.getElementById('city').value;
+
+            console.log('First Name:', firstName);
+            console.log('Last Name:', lastName);
+            console.log('Email:', email);
+            console.log('Phone Number:', phone);
+            console.log('City:', city);
+
+            document.getElementById('registrationForm').reset();
+        });
+    </script>
 </body>
 </html>
